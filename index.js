@@ -1,4 +1,4 @@
-var { Token, categoryID, voiceID } = require('./config.json');
+var { token, categoryID, voiceID } = require('./config.json');
 
 var { Client } = require('discord.js');
 var client = new Client();
@@ -10,9 +10,7 @@ client.on('voiceStateUpdate', (Old, New) => {
 
     if(New.voiceChannelID == voiceID) {
         New.guild.createChannel(New.user.username, 'voice').then((set) => {
-            New.setVoiceChannel(New.guild.channels.get(set.id)).then(() => {
-                set.setParent(New.guild.channels.get(categoryID));
-            });
+            New.setVoiceChannel(New.guild.channels.get(set.id)).then(() => set.setParent(New.guild.channels.get(categoryID)));
             set.overwritePermissions(New.user, {
                 'CONNECT': true, 'SPEAK': true,
                 'MOVE_MEMBERS': true, 'VIEW_CHANNEL': true,
@@ -36,4 +34,4 @@ client.on('voiceStateUpdate', (Old, New) => {
     }
 });
 
-client.login(Token);
+client.login(token);
