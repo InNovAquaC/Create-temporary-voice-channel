@@ -5,4 +5,7 @@ Discord bot for handling private voices
 1. Edit `config.json`
 2. Install modules (`npm install`)
 3. Launch code (`npm start`)<br>
-For fixing bugs: `npm run dev`
+
+## Bug fix
+1. Install `nodemon` (`npm install --save-dev nodemon`)
+2. Launch code (`npm run dev`)
