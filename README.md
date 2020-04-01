@@ -1,5 +1,11 @@
-# Create temporary voice channel
+# tempvoice
+Discord bot for handling private voices
 
-<img src='https://2.top4top.net/p_1330ddv261.gif'>
-<hr>
-<img src='https://5.top4top.net/p_13303lmn91.png'>
+## Setup
+1. Edit `config.json`
+2. Install modules (`npm install`)
+3. Launch code (`npm start`)<br>
+
+## Bug fix
+1. Install `nodemon` (`npm install --save-dev nodemon`)
+2. Launch code (`npm run dev`)
